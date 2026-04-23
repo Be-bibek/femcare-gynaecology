@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Star, BookOpen, Clock, Activity, CheckCircle2, Award, Zap, Heart } from 'lucide-react';
 import HeroCanvas from '../components/3d/HeroCanvas';
 
+import FeaturedDoctorsSection from '../components/sections/FeaturedDoctorsSection';
+import FeaturedProducts from '../components/sections/FeaturedProducts';
+import Testimonials from '../components/sections/Testimonials';
+import BlogPreview from '../components/sections/BlogPreview';
+
 const Home = () => {
   const topics = [
     { name: 'History Taking and Examinations', count: '14 Topics', path: '/history-and-examination', color: 'bg-sage-calm' },
@@ -12,12 +17,6 @@ const Home = () => {
     { name: 'Operations & Procedures', count: '18 Topics', path: '/operations-and-procedures', color: 'bg-sage-calm' }
   ];
 
-  const recentUpdates = [
-    { category: 'Vaginal and Vulval Disorders', title: 'Female Genital Mutilation', date: 'Last updated Mar 2026' },
-    { category: 'Urogynaecology', title: 'Urinary Incontinence', date: 'Last updated Mar 2026' },
-    { category: 'Puerperium', title: 'Perinatal Mental Health', date: 'Last updated Mar 2026' }
-  ];
-
   const proFeatures = [
     { title: 'Comprehensive Articles', desc: 'Access 150 expert-written topics in obstetrics and gynaecology, all concise and clinically relevant.', icon: <BookOpen className="text-dusty-rose" /> },
     { title: 'Question Bank', desc: 'Test your knowledge with a wide range of high-quality multiple-choice questions.', icon: <Activity className="text-sage-calm" /> },
@@ -25,12 +24,6 @@ const Home = () => {
     { title: 'Cross-Platform Access', desc: 'Seamlessly switch between desktop, tablet, and mobile — your progress is always in sync.', icon: <Zap className="text-gold-warm" /> },
     { title: 'Progress Tracking', desc: 'Monitor your performance automatically and identify areas for improvement.', icon: <CheckCircle2 className="text-forest-text" /> },
     { title: 'Custom Quiz Builder', desc: 'Generate quizzes tailored to your individual learning needs.', icon: <Award className="text-dusty-rose" /> }
-  ];
-
-  const popularArticles = [
-    { category: 'Sexually Transmitted Infections', title: 'Genital Herpes', author: 'by Grace Fitzgerald' },
-    { category: 'Infertility', title: 'Introduction to Infertility', author: 'by Beth Harcourt' },
-    { category: 'Sexually Transmitted Infections', title: 'Syphilis', author: 'by Tanushree' }
   ];
 
   return (
@@ -52,7 +45,7 @@ const Home = () => {
                 Learn Obstetrics and Gynaecology <span className="text-dusty-rose italic">Online</span>
               </h1>
               <p className="text-lg text-forest-text/70 font-body mb-8 leading-relaxed max-w-xl">
-                Master obstetrics and gynaecology with FemCare. Access clear, concise articles, clinical guides, and illustrations designed for medical students and healthcare professionals to support study, exams, and clinical practice.
+                Master obstetrics and gynaecology with FemCare. Access clear, concise articles, clinical guides, and illustrations designed for medical professionals, or connect with our specialists directly.
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link to="#" className="bg-forest-text text-white px-8 py-4 rounded-full font-accent font-bold hover:bg-forest-text/90 transition-all shadow-xl shadow-forest-text/20 whitespace-nowrap">
@@ -83,10 +76,13 @@ const Home = () => {
         </div>
       </section>
 
+      {/* 1. Consult Expert Specialists */}
+      <FeaturedDoctorsSection />
+
       {/* Explore Topics */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 px-6 bg-cream-base">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-12 border-b border-cream-base pb-6">
+          <div className="flex justify-between items-end mb-12 border-b border-dusty-rose/20 pb-6">
             <h2 className="font-display text-4xl font-bold text-forest-text">Explore Topics</h2>
             <Link to="/physiology" className="hidden sm:flex items-center text-sm font-accent font-bold text-dusty-rose hover:text-forest-text transition-colors">
               View all <ChevronRight size={16} className="ml-1" />
@@ -106,44 +102,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Two Column Section: Recently Updated & Most Popular */}
-      <section className="py-12 px-6 bg-cream-base">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
-          {/* Recently Updated */}
-          <div>
-            <h2 className="font-display text-3xl font-bold text-forest-text mb-8 flex items-center">
-              <Clock className="mr-3 text-dusty-rose" /> Recently Updated
-            </h2>
-            <div className="space-y-6">
-              {recentUpdates.map((item, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-sage-calm">
-                  <span className="text-xs font-accent font-bold uppercase tracking-widest text-forest-text/40 block mb-1">{item.category}</span>
-                  <h3 className="font-display text-xl font-bold text-forest-text mb-2 hover:text-dusty-rose cursor-pointer transition-colors">{item.title}</h3>
-                  <p className="text-xs font-accent text-forest-text/50">{item.date}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Most Popular */}
-          <div>
-            <h2 className="font-display text-3xl font-bold text-forest-text mb-8 flex items-center">
-              <Star className="mr-3 text-gold-warm" /> Most Popular
-            </h2>
-            <div className="space-y-6">
-              {popularArticles.map((item, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-soft-pink">
-                  <span className="text-xs font-accent font-bold uppercase tracking-widest text-forest-text/40 block mb-1">{item.category}</span>
-                  <h3 className="font-display text-xl font-bold text-forest-text mb-2 hover:text-dusty-rose cursor-pointer transition-colors">{item.title}</h3>
-                  <p className="text-xs font-accent text-forest-text/50">{item.author}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
+      {/* 2. Recommended Products */}
+      <FeaturedProducts />
 
       {/* Pro Features Section */}
       <section className="py-24 px-6 bg-forest-text text-white">
@@ -172,6 +132,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* 3. Healing Stories */}
+      <Testimonials />
+
+      {/* 4. Women's Health Insights */}
+      <BlogPreview />
       
     </div>
   );
