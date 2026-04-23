@@ -161,9 +161,9 @@ function ProductCard({ product, index }) {
         {/* Price + CTA */}
         <div className="mt-auto flex items-center justify-between pt-4 border-t border-cream-base">
           <div>
-            <p className="font-display font-bold text-2xl text-forest-text leading-none">${product.price}</p>
+            <p className="font-display font-bold text-2xl text-forest-text leading-none">₹{product.price * 90}</p>
             {product.originalPrice && (
-              <p className="text-xs text-forest-text/40 line-through mt-0.5">${product.originalPrice}</p>
+              <p className="text-xs text-forest-text/40 line-through mt-0.5">₹{product.originalPrice * 90}</p>
             )}
           </div>
 
@@ -293,7 +293,7 @@ export default function FeaturedProducts() {
           {[
             { icon: '🌿', label: 'Clinically Tested', sub: 'Safe & effective formulas' },
             { icon: '🧪', label: 'OB-GYN Approved', sub: 'Trusted by professionals' },
-            { icon: '🚚', label: 'Free Shipping', sub: 'On orders above $50' },
+            { icon: '🚚', label: 'Free Shipping', sub: 'On orders above ₹4500' },
             { icon: '🔄', label: '30-Day Returns', sub: 'Satisfaction guaranteed' },
           ].map((item, i) => (
             <motion.div

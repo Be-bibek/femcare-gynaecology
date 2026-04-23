@@ -42,5 +42,9 @@ FemCare is a high-end, empathetic gynaecology platform designed for medical stud
    npm run build
    ```
 
+## 🌍 Localization
+- **Currency**: Indian Rupee (₹)
+- **Rate**: $1 = ₹90 (fixed conversion for all display prices)
+
 ## 📜 License
 This project is for educational purposes as part of the FemCare medical series.
