@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sage-calm: #D4E2D4;
+  --color-soft-pink: #F9E7E7;
+  --color-forest-text: #2D433D;
+  --color-cream-base: #FFF9F9;
+  --color-dusty-rose: #E5B7B7;
+  --color-gold-warm: #D4AF37;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-accent: "Montserrat", sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+:root {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-forest-text);
+  background-color: var(--color-cream-base);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
