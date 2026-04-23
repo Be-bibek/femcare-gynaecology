@@ -27,10 +27,17 @@ const HistoryAndExamination = () => {
             <ChevronRight size={14} className="mx-2" />
             <span className="text-forest-text font-bold">History & Examination</span>
           </div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-forest-text mb-6">History & Examination</h1>
-          <p className="text-lg text-forest-text/70 font-body leading-relaxed max-w-3xl">
-            A guide to clinical skills, covering essential history taking and physical examination procedures in obstetrics and gynaecology.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="font-display text-5xl md:text-6xl font-bold text-forest-text mb-6">History & Examination</h1>
+              <p className="text-lg text-forest-text/70 font-body leading-relaxed">
+                A guide to clinical skills, covering essential history taking and physical examination procedures. Master the art of empathetic clinical communication.
+              </p>
+            </div>
+            <div className="h-64 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800&auto=format&fit=crop" alt="Examination" className="w-full h-full object-cover" />
+            </div>
+          </div>
         </motion.div>
 
         <div className="space-y-12">

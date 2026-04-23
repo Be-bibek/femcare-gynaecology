@@ -10,11 +10,11 @@ import BlogPreview from '../components/sections/BlogPreview';
 
 const Home = () => {
   const topics = [
-    { name: 'History Taking and Examinations', count: '14 Topics', path: '/history-and-examination', color: 'bg-sage-calm' },
-    { name: 'Labour and Puerperium', count: '33 Topics', path: '/labour-and-puerperium', color: 'bg-soft-pink' },
-    { name: 'Gynaecological Disorders', count: '50 Topics', path: '/gynaecology', color: 'bg-dusty-rose' },
-    { name: 'Sexual Health', count: '31 Topics', path: '/sexual-health', color: 'bg-cream-base' },
-    { name: 'Operations & Procedures', count: '18 Topics', path: '/operations-and-procedures', color: 'bg-sage-calm' }
+    { name: 'History Taking and Examinations', count: '14 Topics', path: '/history-and-examination', color: 'bg-sage-calm', image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop' },
+    { name: 'Labour and Puerperium', count: '33 Topics', path: '/labour-and-puerperium', color: 'bg-soft-pink', image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop' },
+    { name: 'Gynaecological Disorders', count: '50 Topics', path: '/gynaecology', color: 'bg-dusty-rose', image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop' },
+    { name: 'Sexual Health', count: '31 Topics', path: '/sexual-health', color: 'bg-cream-base', image: 'https://images.unsplash.com/photo-1631217818242-27ae17ff5858?q=80&w=600&auto=format&fit=crop' },
+    { name: 'Operations & Procedures', count: '18 Topics', path: '/operations-and-procedures', color: 'bg-sage-calm', image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=600&auto=format&fit=crop' }
   ];
 
   const proFeatures = [
@@ -91,11 +91,18 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {topics.map((topic, index) => (
-              <Link key={index} to={topic.path} className={`group block p-8 rounded-3xl border border-cream-base hover:border-dusty-rose transition-all duration-300 ${topic.color} bg-opacity-20 hover:bg-opacity-40`}>
-                <h3 className="font-display text-2xl font-bold text-forest-text mb-2 group-hover:text-dusty-rose transition-colors">{topic.name}</h3>
-                <p className="text-sm font-accent text-forest-text/60 flex items-center">
-                  <BookOpen size={14} className="mr-2" /> {topic.count}
-                </p>
+              <Link key={index} to={topic.path} className={`group block relative p-8 rounded-3xl border border-cream-base overflow-hidden transition-all duration-500 h-64 flex flex-col justify-end`}>
+                <div className="absolute inset-0 z-0">
+                  <img src={topic.image} alt={topic.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60" />
+                  <div className={`absolute inset-0 ${topic.color} opacity-40 group-hover:opacity-20 transition-opacity duration-500`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-text/60 to-transparent" />
+                </div>
+                <div className="relative z-10">
+                  <h3 className="font-display text-2xl font-bold text-white mb-2 group-hover:text-dusty-rose transition-colors">{topic.name}</h3>
+                  <p className="text-sm font-accent text-white/80 flex items-center">
+                    <BookOpen size={14} className="mr-2" /> {topic.count}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>

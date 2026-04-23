@@ -31,10 +31,17 @@ const OperationsAndProcedures = () => {
             <ChevronRight size={14} className="mx-2" />
             <span className="text-forest-text font-bold">Operations & Procedures</span>
           </div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-forest-text mb-6">Operations & Procedures</h1>
-          <p className="text-lg text-forest-text/70 font-body leading-relaxed max-w-3xl">
-            Surgical techniques and outpatient procedures across obstetrics, gynaecology, and sexual health.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="font-display text-5xl md:text-6xl font-bold text-forest-text mb-6">Operations & Procedures</h1>
+              <p className="text-lg text-forest-text/70 font-body leading-relaxed">
+                Surgical techniques and outpatient procedures across obstetrics, gynaecology, and sexual health. Professional guides for clinical practitioners.
+              </p>
+            </div>
+            <div className="h-64 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" alt="Operations" className="w-full h-full object-cover" />
+            </div>
+          </div>
         </motion.div>
 
         <div className="space-y-12">

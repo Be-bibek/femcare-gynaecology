@@ -16,29 +16,34 @@ const TimelineStep = ({ step, index }) => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-cream-base relative group hover:shadow-xl transition-all duration-500"
+          className="bg-white rounded-[40px] shadow-sm border border-cream-base relative group hover:shadow-xl transition-all duration-500 overflow-hidden"
         >
-          <div className={`w-14 h-14 rounded-2xl ${step.color} flex items-center justify-center mb-6 text-white ${isEven ? 'md:ml-auto' : ''}`}>
-            {step.icon}
+          <div className="h-48 overflow-hidden">
+            <img src={step.image} alt={step.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           </div>
-          <span className="text-xs font-accent font-bold uppercase tracking-widest text-dusty-rose mb-2 block">
-            {step.phase}
-          </span>
-          <h3 className="font-display text-3xl font-bold text-forest-text mb-4 leading-tight">
-            {step.title}
-          </h3>
-          <p className="text-forest-text/60 font-body leading-relaxed mb-6">
-            {step.description}
-          </p>
-          <ul className={`space-y-3 ${isEven ? 'md:flex md:flex-col md:items-end' : ''}`}>
-            {step.highlights.map((h, i) => (
-              <li key={i} className="flex items-center space-x-2 text-sm font-accent text-forest-text/80">
-                {!isEven && <div className="w-1.5 h-1.5 rounded-full bg-sage-calm"></div>}
-                <span>{h}</span>
-                {isEven && <div className="w-1.5 h-1.5 rounded-full bg-sage-calm"></div>}
-              </li>
-            ))}
-          </ul>
+          <div className="p-8 md:p-10">
+            <div className={`w-14 h-14 rounded-2xl ${step.color} flex items-center justify-center mb-6 text-white ${isEven ? 'md:ml-auto' : ''}`}>
+              {step.icon}
+            </div>
+            <span className="text-xs font-accent font-bold uppercase tracking-widest text-dusty-rose mb-2 block">
+              {step.phase}
+            </span>
+            <h3 className="font-display text-3xl font-bold text-forest-text mb-4 leading-tight">
+              {step.title}
+            </h3>
+            <p className="text-forest-text/60 font-body leading-relaxed mb-6">
+              {step.description}
+            </p>
+            <ul className={`space-y-3 ${isEven ? 'md:flex md:flex-col md:items-end' : ''}`}>
+              {step.highlights.map((h, i) => (
+                <li key={i} className="flex items-center space-x-2 text-sm font-accent text-forest-text/80">
+                  {!isEven && <div className="w-1.5 h-1.5 rounded-full bg-sage-calm"></div>}
+                  <span>{h}</span>
+                  {isEven && <div className="w-1.5 h-1.5 rounded-full bg-sage-calm"></div>}
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
       </div>
 
@@ -58,7 +63,8 @@ const MaternitySuite = () => {
       description: 'Preparing your body and mind for the beautiful journey ahead. Focus on nutrition, screenings, and emotional readiness.',
       highlights: ['Genetic Screenings', 'Folic Acid Support', 'Lifestyle Optimization'],
       icon: <Sparkles size={24} />,
-      color: 'bg-sage-calm'
+      color: 'bg-sage-calm',
+      image: 'https://images.unsplash.com/photo-1516549221187-fb9d47d4076e?q=80&w=800&auto=format&fit=crop'
     },
     {
       phase: 'Trimester 1',
@@ -66,7 +72,8 @@ const MaternitySuite = () => {
       description: 'The first 12 weeks where the magic begins. Navigating early symptoms and establishing your prenatal care plan.',
       highlights: ['Initial Ultrasound', 'NIPT Screening', 'Morning Sickness Management'],
       icon: <Heart size={24} />,
-      color: 'bg-soft-pink'
+      color: 'bg-soft-pink',
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop'
     },
     {
       phase: 'Trimester 2',
@@ -74,7 +81,8 @@ const MaternitySuite = () => {
       description: 'Energy returns as your baby grows. A time for anatomical scans and feeling those first precious movements.',
       highlights: ['Anomaly Scan', 'Glucose Testing', 'Maternity Wellness'],
       icon: <Sun size={24} />,
-      color: 'bg-dusty-rose'
+      color: 'bg-dusty-rose',
+      image: 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=800&auto=format&fit=crop'
     },
     {
       phase: 'Trimester 3',
@@ -82,7 +90,8 @@ const MaternitySuite = () => {
       description: 'Preparing for the big day. Focusing on birth plans, comfort, and final growth checks for your little one.',
       highlights: ['Birth Plan Consultation', 'GBS Screening', 'NST Monitoring'],
       icon: <Footprints size={24} />,
-      color: 'bg-forest-text'
+      color: 'bg-forest-text',
+      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop'
     },
     {
       phase: 'The Birth',
@@ -90,7 +99,8 @@ const MaternitySuite = () => {
       description: 'A supportive, calm, and medically excellent environment for your delivery, tailored to your preferences.',
       highlights: ['24/7 Specialist Cover', 'Pain Management Options', 'Immediate Skin-to-Skin'],
       icon: <Baby size={24} />,
-      color: 'bg-gold-warm'
+      color: 'bg-gold-warm',
+      image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop'
     },
     {
       phase: 'Postpartum',
@@ -98,7 +108,8 @@ const MaternitySuite = () => {
       description: 'Healing and bonding. Dedicated support for physical recovery, lactation, and emotional well-veing.',
       highlights: ['Lactation Support', 'Pelvic Floor Recovery', 'Mental Health Checkups'],
       icon: <ShieldCheck size={24} />,
-      color: 'bg-sage-calm'
+      color: 'bg-sage-calm',
+      image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800&auto=format&fit=crop'
     }
   ];
 

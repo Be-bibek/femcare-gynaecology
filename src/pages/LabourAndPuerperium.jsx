@@ -31,10 +31,17 @@ const LabourAndPuerperium = () => {
             <ChevronRight size={14} className="mx-2" />
             <span className="text-forest-text font-bold">Labour & Puerperium</span>
           </div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-forest-text mb-6">Labour & Puerperium</h1>
-          <p className="text-lg text-forest-text/70 font-body leading-relaxed max-w-3xl">
-            Detailed insights into delivery methods, obstetric emergencies, and postpartum care.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="font-display text-5xl md:text-6xl font-bold text-forest-text mb-6">Labour & Puerperium</h1>
+              <p className="text-lg text-forest-text/70 font-body leading-relaxed">
+                Detailed insights into delivery methods, obstetric emergencies, and postpartum care. Essential clinical protocols for a safe and healthy birth journey.
+              </p>
+            </div>
+            <div className="h-64 rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" alt="Labour & Puerperium" className="w-full h-full object-cover" />
+            </div>
+          </div>
         </motion.div>
 
         <div className="space-y-12">
