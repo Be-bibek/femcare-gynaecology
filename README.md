@@ -3,7 +3,8 @@
 FemCare is a high-end, empathetic gynaecology platform designed for medical students and healthcare professionals. Inspired by the "Wellness Sanctuary" philosophy, it provides clear, concise, and visually rich educational resources.
 
 ## 🚀 Live Demo
-**[View Live Site](https://be-bibek.github.io/femcare-gynaecology/)**
+**[View on Netlify (Recommended)](https://femcare-gynaecology.netlify.app/)**  
+**[View on GitHub Pages](https://be-bibek.github.io/femcare-gynaecology/)**
 
 ## ✨ Features
 - **3D Hero Sanctuary**: Interactive geometric visuals using React Three Fiber.
