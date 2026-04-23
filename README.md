@@ -1,10 +1,9 @@
-# FemCare — Premium Gynaecology & Obstetrics Portal
+# FemCare — The Premium Gynaecology Sanctuary
 
-FemCare is a high-end, empathetic gynaecology platform designed for medical students and healthcare professionals. Inspired by the "Wellness Sanctuary" philosophy, it provides clear, concise, and visually rich educational resources.
+FemCare is a high-end, empathetic digital sanctuary designed to bridge the gap between clinical excellence and personal wellness. Built specifically for Gynaecology and Obstetrics, it offers a serene, "sanctuary-style" interface that empowers women through every stage of their life—from menstrual wellness to maternity and beyond.
 
 ## 🚀 Live Demo
-**[View on Netlify (Recommended)](https://femcare-gynaecology.netlify.app/)**  
-**[View on GitHub Pages](https://be-bibek.github.io/femcare-gynaecology/)**
+**[Launch FemCare Sanctuary](https://femcare-gynaecology.netlify.app/)**
 
 ## ✨ Features
 - **3D Hero Sanctuary**: Interactive geometric visuals using React Three Fiber.
