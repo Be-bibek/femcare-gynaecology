@@ -45,7 +45,7 @@ const DOCTORS = [
     badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     accentColor: 'from-sage-calm/40 to-sage-calm/10',
     tagColor: 'bg-sage-calm/20 text-forest-text border-sage-calm/50',
-    image: 'https://images.unsplash.com/photo-1594824436951-7f12bc4175de?q=80&w=600&h=700&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1594824419142-d81b8969f691?q=80&w=600&h=700&auto=format&fit=crop',
   },
   {
     _id: 'd3',
