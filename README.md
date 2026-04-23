@@ -1,16 +1,45 @@
-# React + Vite
+# FemCare — Premium Gynaecology & Obstetrics Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FemCare is a high-end, empathetic gynaecology platform designed for medical students and healthcare professionals. Inspired by the "Wellness Sanctuary" philosophy, it provides clear, concise, and visually rich educational resources.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+**[View Live Site](https://be-bibek.github.io/femcare-gynaecology/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **3D Hero Sanctuary**: Interactive geometric visuals using React Three Fiber.
+- **Comprehensive Subject Hub**: physiology, pregnancy, labour, gynaecology, and more.
+- **Exam-Focused Question Bank**: High-yield MCQs for medical revision.
+- **Clinical Skills**: Detailed guides on history taking and examinations.
+- **Premium UI/UX**: Built with Tailwind CSS v4 and Framer Motion for a serene medical aesthetic.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion, GSAP, Lenis (Smooth Scroll)
+- **3D Graphics**: Three.js, @react-three/fiber
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Installation & Setup
 
-## Expanding the ESLint configuration
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Be-bibek/femcare-gynaecology.git
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 📜 License
+This project is for educational purposes as part of the FemCare medical series.
