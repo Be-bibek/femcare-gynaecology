@@ -28,7 +28,7 @@ const DOCTORS = [
   },
   {
     _id: 'd2',
-    name: 'Dr. Emily Chen',
+    name: 'Dr. Meera Patel',
     title: 'MD, FACOG',
     specialization: 'Reproductive Endocrinology',
     expertise: ['PCOS', 'Fertility', 'Hormonal Imbalance', 'IVF Consultation'],
@@ -37,7 +37,7 @@ const DOCTORS = [
     rating: 4.8,
     reviews: 976,
     consultations: '4,100+',
-    languages: ['English', 'Mandarin'],
+    languages: ['English', 'Hindi', 'Gujarati'],
     nextSlot: 'Today, 6:30 PM',
     available: true,
     modes: ['video', 'phone'],
@@ -45,7 +45,7 @@ const DOCTORS = [
     badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     accentColor: 'from-sage-calm/40 to-sage-calm/10',
     tagColor: 'bg-sage-calm/20 text-forest-text border-sage-calm/50',
-    image: 'https://images.unsplash.com/photo-1594824419142-d81b8969f691?q=80&w=600&h=700&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&h=700&auto=format&fit=crop',
   },
   {
     _id: 'd3',

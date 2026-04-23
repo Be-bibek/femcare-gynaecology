@@ -38,7 +38,7 @@ const PRODUCTS = [
     badgeColor: 'bg-forest-text text-white',
     description: 'A soothing blend of spearmint, raspberry leaf, and chasteberry to support natural hormonal harmony.',
     benefits: ['Supports natural cycle', 'Reduces bloating', 'Calms anxiety'],
-    image: 'https://images.unsplash.com/photo-1596541223130-5d564415f0d4?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1576092762791-dd9e2220cad1?q=80&w=600&auto=format&fit=crop',
     colour: 'from-sage-calm/80 to-cream-base/40',
   },
   {
